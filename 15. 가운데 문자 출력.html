@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가운데 문자 출력</title>
+</head>
+<body>
+<script>
+    function solution(word) {
+        let answer = ''
+        let index = Math.floor(word.length/2);
+        if(word.length%2===1){
+            answer = word[index];
+        }
+        else {
+            answer = word[index];
+            answer += word[index-1]
+        }
+        return answer;
+    }
+    console.log(solution('study'));
+    console.log(solution('good'));
+</script>
+</body>
+</html>

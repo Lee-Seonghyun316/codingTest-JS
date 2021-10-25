@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대소문자 변환</title>
+</head>
+<body>
+<script>
+    function solution(word) {
+        let answer = '';
+        for (let x of word) {
+            let num = x.charCodeAt();
+            if (num >= 65 && num <= 90) {
+                answer += String.fromCharCode(num + 32);
+            }
+            else {
+                answer += String.fromCharCode(num - 32);
+            }
+        }
+        return answer;
+    }
+
+    let word = 'StuDY';
+    console.log(solution(word));
+</script>
+</body>
+</html>

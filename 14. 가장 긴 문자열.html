@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>가장 긴 문자열</title>
+</head>
+<body>
+<script>
+    function solution(words) {
+        let answer = '';
+        let MAX = 0;
+        for (let word of words) {
+            if(MAX < word.length){
+                MAX = word.length;
+                answer = word;
+            }
+        }
+        return answer;
+    }
+
+    let words = ['teacher', 'time', 'student', 'beautiful', 'good'];
+    console.log(solution(words));
+</script>
+</body>
+</html>
