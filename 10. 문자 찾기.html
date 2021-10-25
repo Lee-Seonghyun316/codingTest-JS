@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문자 찾기</title>
+</head>
+<body>
+<script>
+    function solution(word, alphabet) {
+        // let answer = word.replaceAll('A', '#');
+        let count = 0;
+        for (let x of word) {
+            if (x === alphabet) count++;
+        }
+        return count;
+    }
+
+    let word = 'COMPUTERPROGRAMMING'
+    let alphabet = 'R'
+    console.log(solution(word, alphabet));
+</script>
+</body>
+</html>

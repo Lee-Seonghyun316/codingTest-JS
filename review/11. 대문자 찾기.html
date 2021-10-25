@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대문자 찾기</title>
+</head>
+<body>
+<script>
+    function solution(word) {
+        let count = 0;
+        for (let x of word) {
+            let num = x.charCodeAt();
+            if (65 <= num && num <= 90) {
+                count++;
+                console.log(x);
+            }
+            // if (x === x.toUpperCase()) count++;
+        }
+        return count;
+    }
+
+    let word = 'KoreaTimeGood'
+    console.log(solution(word));
+</script>
+</body>
+</html>

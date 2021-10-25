@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대문자로 통일</title>
+</head>
+<body>
+<script>
+    function solution(word) {
+        // let answer = word.toUpperCase();
+        let answer = '';
+        for (let x of word) {
+            let num = x.charCodeAt();
+            if (num >= 97 && num <= 122) {
+                answer += String.fromCharCode(num-32);
+            } else answer += x;
+        }
+        return answer;
+    }
+
+    let word = 'ItisTimeToStudy'
+    console.log(solution(word));
+</script>
+</body>
+</html>
