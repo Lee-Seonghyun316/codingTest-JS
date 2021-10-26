@@ -7,17 +7,18 @@
 <body>
 <script>
     function solution(arr) {
-        let sum = arr.reduce((a, b) => a + b, 0);
-        let count = 0;
-        for (let i = 0; i < arr.length; i++) {
+        let solution = arr;
+        for (let i = 0; i < arr.length - 1; i++) {
             for (let j = i + 1; j < arr.length; j++) {
+                let sum = arr.reduce((a, b) => a + b, 0);
                 if (sum - arr[i] - arr[j] === 100) {
-                    arr.splice(j, 1);
-                    arr.splice(i, 1);
+                    solution.splice(j, 1);
+                    solution.splice(i, 1);
+                    //j 먼저 지워야 밀려서 지워지지 않음.
+                    return solution;
                 }
             }
         }
-        return arr;
     }
 
     let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13]
